@@ -1,6 +1,6 @@
 {
   "name": "topcoat-checkbox-base",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Topcoat checkbox base. Reset styles for checkboxes.",
   "main": "index.html",
   "directories": {
