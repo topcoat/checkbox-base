@@ -1,6 +1,8 @@
-EXAMPLE Base
-===========
+Checkbox Base
+=============
 
-### Topcoat EXAMPLE base
+### Topcoat Checkbox base
 
-This is the base for all Topcoat EXAMPLEs.
+This is the base for all Topcoat checkboxes.
+
+[![NPM](https://nodei.co/npm/topcoat-checkbox-base.png)](https://nodei.co/npm/topcoat-checkbox-base/)
