@@ -16,4 +16,4 @@
 *
 */
 
-input[type=checkbox]{display:none}input[type=checkbox]:disabled+label{cursor:default;pointer-events:none}
+input[type=checkbox]{display:none}input[type=checkbox]:disabled+label{opacity:.3;cursor:default;pointer-events:none}

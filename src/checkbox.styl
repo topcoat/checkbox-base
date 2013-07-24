@@ -15,10 +15,10 @@
 * limitations under the License.
 *
 */
+@import utils
 
 input[type="checkbox"]
   display none
 
 input[type="checkbox"]:disabled + label
-  cursor default
-  pointer-events none
+  disabled()

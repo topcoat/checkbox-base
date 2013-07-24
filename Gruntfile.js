@@ -30,6 +30,8 @@ module.exports = function(grunt) {
         stylus: {
             compile: {
                 options: {
+                    paths: ['node_modules/topcoat-utils/src/mixins'],
+                    import: ['utils'],
                     compress: false,
                 },
                 files: [{
