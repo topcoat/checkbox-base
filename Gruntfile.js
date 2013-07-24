@@ -47,10 +47,7 @@ module.exports = function(grunt) {
                 cwd: 'css/',
                 src: ['*.css', '!*.min.css'],
                 dest: 'css/',
-                ext: '.min.css',
-                options: {
-                    banner: grunt.file.read('src/copyright.styl').toString()
-                }
+                ext: '.min.css'
             },
         },
 
