@@ -23,3 +23,20 @@ input[type="checkbox"]:disabled + label {
   cursor: default;
   pointer-events: none;
 }
+.checkbox-label,
+.checkbox-label:before,
+.checkbox-label:after {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  cursor: default;
+  user-select: none;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  outline: none;
+}
+.checkbox-label:before,
+.checkbox-label:after {
+  content: "";
+  cursor: pointer;
+}

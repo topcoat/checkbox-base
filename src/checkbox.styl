@@ -22,3 +22,15 @@ input[type="checkbox"]
 
 input[type="checkbox"]:disabled + label
   disabled()
+
+.checkbox-label
+  reset-box-model()
+  reset-cursor()
+  inline-block()
+  outline none
+
+.checkbox-label:before,
+.checkbox-label:after
+  content ""
+  @extend .checkbox-label
+  cursor pointer
