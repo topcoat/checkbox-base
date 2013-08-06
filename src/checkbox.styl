@@ -18,18 +18,21 @@
 @import utils
 
 input[type="checkbox"]
-  display none
-
-input[type="checkbox"]:disabled + label
-  disabled()
+  reset-input()
 
 .checkbox
+  reset-box-model()
   inline-block()
-
-.checkbox__label
   reset-cursor()
 
-.checkbox__label:before,
-.checkbox__label:after
+.checkbox__label
+  inline-block()
+  reset-cursor()
+
+.checkbox:before,
+.checkbox:after
   content ''
   position absolute
+
+.checkbox:before
+  reset-box-model()
