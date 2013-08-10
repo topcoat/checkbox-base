@@ -41,6 +41,11 @@ input[type="checkbox"] {
   cursor: default;
   user-select: none;
 }
+.checkbox--disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
+}
 .checkbox:before,
 .checkbox:after {
   content: '';
