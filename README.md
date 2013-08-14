@@ -5,5 +5,5 @@ Checkbox Base
 
 This is the base for all Topcoat checkboxes.
 
-![https://travis-ci.org/topcoat/topcoat-checkbox-base](https://travis-ci.org/topcoat/topcoat-checkbox-base.png)
+[![Build Status](https://travis-ci.org/topcoat/checkbox-base.png?branch=master)](https://travis-ci.org/topcoat/checkbox-base)
 [![NPM](https://nodei.co/npm/topcoat-checkbox-base.png)](https://nodei.co/npm/topcoat-checkbox-base/)
