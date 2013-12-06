@@ -25,33 +25,38 @@ input[type="checkbox"] {
   vertical-align: top;
   outline: none;
 }
-.checkbox {
-  box-sizing: border-box;
-  background-clip: padding-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
+
+.checkbox,
+.checkbox__label {
   cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
+
+.checkbox,
+.checkbox:before {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.checkbox,
 .checkbox__label {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  cursor: default;
-  user-select: none;
 }
+
 .checkbox--disabled {
   opacity: 0.3;
   cursor: default;
   pointer-events: none;
 }
+
 .checkbox:before,
 .checkbox:after {
   content: '';
   position: absolute;
-}
-.checkbox:before {
-  box-sizing: border-box;
-  background-clip: padding-box;
 }
