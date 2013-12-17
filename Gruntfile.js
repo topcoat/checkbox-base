@@ -27,62 +27,45 @@ module.exports = function(grunt) {
             release: ['css']
         },
 
-        stylus: {
+        topcoat: {
+            options: {
+                browsers: ['last 2 versions'],
+                license: grunt.file.read('test/fixtures/license.txt', 'utf-8')
+            },
             compile: {
-                options: {
-                    paths: ['node_modules/topcoat-utils/src/mixins'],
-                    import: ['utils'],
-                    compress: false,
-                },
                 files: [{
-                    src: 'src/checkbox.styl',
-                    dest: 'css/checkbox.css'
-                }]
+                        src: 'test/fixtures/checkbox.css',
+                        dest: 'css/checkbox.css'
+                    }
+                ]
             }
         },
 
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'css/',
+                cwd: 'css',
                 src: ['*.css', '!*.min.css'],
-                dest: 'css/',
+                dest: 'css',
                 ext: '.min.css'
             },
-        },
-
-        jade: {
-            compile: {
-                expand: true,
-                cwd: 'test/perf',
-                src: ['*.jade'],
-                dest: 'test/perf/',
-                ext: '.test.html'
-            }
         },
 
         simplemocha: {
             all: {
                 src: ['test/*.test.js']
             }
-        },
-
-        watch: {
-            files: 'src/**/*.styl',
-            tasks: ['build', 'test']
         }
     });
 
     // These plugins provide necessary tasks.
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-stylus');
+    grunt.loadNpmTasks('grunt-topcoat');
     grunt.loadNpmTasks('grunt-simple-mocha');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-contrib-clean');
 
     grunt.registerTask('default', ['clean', 'build', 'test', 'release']);
-    grunt.registerTask('build', ['stylus', 'jade']);
+    grunt.registerTask('build', ['topcoat']);
     grunt.registerTask('test', ['simplemocha']);
     grunt.registerTask('release', ['cssmin']);
 

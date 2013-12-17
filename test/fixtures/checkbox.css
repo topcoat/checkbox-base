@@ -15,27 +15,26 @@
 * limitations under the License.
 *
 */
-@import utils
+@import "./src/checkbox.css";
 
-input[type="checkbox"]
-  hide-input()
+.checkbox {
+    extend: %checkbox;
+}
 
-.checkbox
-  reset-box-model()
-  inline-block()
-  reset-cursor()
+.checkbox__label {
+    extend: %checkbox__label
+}
 
-.checkbox__label
-  inline-block()
-  reset-cursor()
-
-.checkbox--disabled
-  disabled()
+.checkbox--disabled {
+    extend: %checkbox--disabled;
+}
 
 .checkbox:before,
-.checkbox:after
-  content ''
-  position absolute
+.checkbox:after {
+    extend: %checkbox__pseudo;
+}
 
-.checkbox:before
-  reset-box-model()
+.checkbox:before {
+    extend: %checkbox__pseudo--before;
+}
+
